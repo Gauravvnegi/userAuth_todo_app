@@ -1,0 +1,42 @@
+<!-- create-task.component.html -->
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <label for="priority">Priority:</label>
+    <input type="text" id="priority" formControlName="priority">
+    <label for="description">Description:</label>
+    <input type="text" id="description" formControlName="description">
+    <label for="important">Mark as Important:</label>
+    <input type="checkbox" id="important" formControlName="important">
+    <button type="submit">Create</button>
+</form>
+
+<div *ngFor="let task of userAuthService.tasks" class="task-card">
+    <div *ngIf="!task.editing">
+        <div>
+            <strong>ID:</strong> {{ task.id }}
+        </div>
+        <div>
+            <strong>Priority:</strong> {{ task.priority }}
+        </div>
+        <div>
+            <strong>Description:</strong> {{ task.description }}
+        </div>
+        <div>
+            <strong>Important:</strong> {{ task.important ? 'Yes' : 'No' }}
+        </div>
+        <div>
+            <button (click)="editTask(task)">Edit</button>
+            <button (click)="deleteTask(task.id)">Delete</button>
+        </div>
+    </div>
+    <div *ngIf="task.editing">
+        <form [formGroup]="editTaskForm" (ngSubmit)="onEditSubmit(task)">
+            <label for="editPriority">Priority:</label>
+            <input type="text" id="editPriority" formControlName="editPriority">
+            <label for="editDescription">Description:</label>
+            <input type="text" id="editDescription" formControlName="editDescription">
+            <label for="editImportant">Mark as Important:</label>
+            <input type="checkbox" id="editImportant" formControlName="editImportant">
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+/* create-task.component.scss */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    margin-top: 50px; /* Adjust top margin as needed */
+}
+
+label {
+    margin-bottom: 5px; /* Add space below labels */
+}
+
+input[type="text"], input[type="checkbox"], button {
+    margin-bottom: 10px; /* Add space below input fields and button */
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* create.component.scss */
+.task-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .task-card button {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,20 @@
+<div class="heading-container">
+    <h1 class="important-tasks-heading">Important Tasks</h1>
+  </div>
+  
+<div class="important-tasks-container">
+    <div *ngFor="let task of importantTasks" class="task-card">
+        <div>
+            <strong>ID:</strong> {{ task.id }}
+        </div>
+        <div>
+            <strong>Priority:</strong> {{ task.priority }}
+        </div>
+        <div>
+            <strong>Description:</strong> {{ task.description }}
+        </div>
+        <div>
+            <strong>Important:</strong> Yes
+        </div>
+    </div>
+</div>

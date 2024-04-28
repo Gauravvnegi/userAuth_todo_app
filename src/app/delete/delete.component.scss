@@ -1,0 +1,26 @@
+.deleted-items-header {
+    text-align: center;
+  }
+  
+  .deleted-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .task-card button {
+    margin-top: 5px;
+  }
+  
+  .task-card button:last-child {
+    margin-left: 5px;
+  }
+  
